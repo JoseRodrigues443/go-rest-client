@@ -1,18 +1,17 @@
 # Go Repository Template
 
 [![Keep a Changelog](https://img.shields.io/badge/changelog-Keep%20a%20Changelog-%23E05735)](CHANGELOG.md)
-[![GitHub Release](https://img.shields.io/github/v/release/golang-templates/seed)](https://github.com/golang-templates/seed/releases)
-[![Go Reference](https://pkg.go.dev/badge/github.com/golang-templates/seed.svg)](https://pkg.go.dev/github.com/golang-templates/seed)
-[![go.mod](https://img.shields.io/github/go-mod/go-version/golang-templates/seed)](go.mod)
-[![LICENSE](https://img.shields.io/github/license/golang-templates/seed)](LICENSE)
-[![Build Status](https://img.shields.io/github/workflow/status/golang-templates/seed/build)](https://github.com/golang-templates/seed/actions?query=workflow%3Abuild+branch%3Amain)
-[![Go Report Card](https://goreportcard.com/badge/github.com/golang-templates/seed)](https://goreportcard.com/report/github.com/golang-templates/seed)
-[![Codecov](https://codecov.io/gh/golang-templates/seed/branch/main/graph/badge.svg)](https://codecov.io/gh/golang-templates/seed)
+[![GitHub Release](https://img.shields.io/github/v/release/JoseRodrigues443/go-rest-client)](https://github.com/JoseRodrigues443/go-rest-client/releases)
+[![Go Reference](https://pkg.go.dev/badge/github.com/JoseRodrigues443/go-rest-client.svg)](https://pkg.go.dev/github.com/JoseRodrigues443/go-rest-client)
+[![go.mod](https://img.shields.io/github/go-mod/go-version/JoseRodrigues443/go-rest-client)](go.mod)
+[![LICENSE](https://img.shields.io/github/license/JoseRodrigues443/go-rest-client)](LICENSE)
+[![Build Status](https://img.shields.io/github/workflow/status/JoseRodrigues443/go-rest-client/build)](https://github.com/JoseRodrigues443/go-rest-client/actions?query=workflow%3Abuild+branch%3Amain)
+[![Go Report Card](https://goreportcard.com/badge/github.com/JoseRodrigues443/go-rest-client)](https://goreportcard.com/report/github.com/JoseRodrigues443/go-rest-client)
 
 This is a GitHub repository template for Go. It has been created for ease-of-use for anyone who wants to:
 
 - quickly get into Go without losing too much time on environment setup,
-- create a new repoisitory with basic Continous Integration.
+- create a new repoisitory with basic Continuos Integration.
 
 It includes:
 
@@ -35,7 +34,7 @@ It includes:
 
 1. Sign up on [Codecov](https://codecov.io/) and configure [Codecov GitHub Application](https://github.com/apps/codecov) for all repositories.
 1. Click the `Use this template` button (alt. clone or download this repository).
-1. Replace all occurences of `golang-templates/seed` to `your_org/repo_name` in all files.
+1. Replace all occurences of `JoseRodrigues443/go-rest-client` to `your_org/repo_name` in all files.
 1. Replace all occurences of `seed` to `repo_name` in [Dockerfile](Dockerfile).
 1. Update the following files:
    - [CHANGELOG.md](CHANGELOG.md)
@@ -105,19 +104,6 @@ Notable files:
 - [tools.go](tools.go) - [build tools](https://github.com/golang/go/wiki/Modules#how-can-i-track-tool-dependencies-for-a-module).
 
 ## FAQ
-
-### Why Visual Studio Code editor configuration
-
-Developers that use Visual Studio Code can take advantage of the editor configuration. While others do not have to care about it. Setting configs for each repo is unnecessary time consuming. VS Code is the most popular Go editor ([survey](https://blog.golang.org/survey2019-results)) and it is officially [supported by the Go team](https://blog.golang.org/vscode-go).
-
-You can always remove the [.devcontainer](.devcontainer) and [.vscode](.vscode) directories if it really does not help you.
-
-### Why GitHub Actions, not any other CI server
-
-GitHub Actions is out-of-the-box if you are already using GitHub.
-[Here](https://github.com/mvdan/github-actions-golang) you can learn how to use it for Go.
-
-However, changing to any other CI server should be very simple, because this repository has build logic and tooling installation in [Makefile](Makefile).
 
 ### How can I build on Windows
 

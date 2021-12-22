@@ -1,6 +1,6 @@
 linters-settings:
   goimports:
-    local-prefixes: github.com/golang-templates/seed
+    local-prefixes: github.com/JoseRodrigues443/go-rest-client
   golint:
     min-confidence: 0.8
   gocyclo:

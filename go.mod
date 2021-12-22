@@ -1,4 +1,4 @@
-module github.com/golang-templates/seed
+module github.com/JoseRodrigues443/go-rest-client
 
 go 1.16
 
