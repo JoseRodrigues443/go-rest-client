@@ -1,11 +1,10 @@
 # Go Repository Template
 
-[![Keep a Changelog](https://img.shields.io/badge/changelog-Keep%20a%20Changelog-%23E05735)](CHANGELOG.md)
-[![GitHub Release](https://img.shields.io/github/v/release/github.com/JoseRodrigues443/go-rest-client)](https://github.com/JoseRodrigues443/go-rest-client/releases)
+
 [![Go Reference](https://pkg.go.dev/badge/github.com/JoseRodrigues443/go-rest-client.svg)](https://pkg.go.dev/github.com/JoseRodrigues443/go-rest-client)
-[![go.mod](https://img.shields.io/github/go-mod/go-version/github.com/JoseRodrigues443/go-rest-client)](go.mod)
-[![LICENSE](https://img.shields.io/github/license/github.com/JoseRodrigues443/go-rest-client)](LICENSE)
-[![Build Status](https://img.shields.io/github/workflow/status/github.com/JoseRodrigues443/go-rest-client/build)](https://github.com/JoseRodrigues443/go-rest-client/actions?query=workflow%3Abuild+branch%3Amain)
+[![go.mod](https://img.shields.io/github/go-mod/go-version/golang-templates/seed)](go.mod)
+[![build](https://github.com/JoseRodrigues443/go-rest-client/actions/workflows/build.yml/badge.svg)](https://github.com/JoseRodrigues443/go-rest-client/actions/workflows/build.yml)
+[![CodeQL](https://github.com/JoseRodrigues443/go-rest-client/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/JoseRodrigues443/go-rest-client/actions/workflows/codeql-analysis.yml)
 [![Go Report Card](https://goreportcard.com/badge/github.com/JoseRodrigues443/go-rest-client)](https://goreportcard.com/report/github.com/JoseRodrigues443/go-rest-client)
 
 This is a Rest client written in Go. It has been created for ease-of-use for anyone who wants to:
