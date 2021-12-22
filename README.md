@@ -1,21 +1,22 @@
 # Go Repository Template
 
 [![Keep a Changelog](https://img.shields.io/badge/changelog-Keep%20a%20Changelog-%23E05735)](CHANGELOG.md)
-[![GitHub Release](https://img.shields.io/github/v/release/JoseRodrigues443/go-rest-client)](https://github.com/JoseRodrigues443/go-rest-client/releases)
+[![GitHub Release](https://img.shields.io/github/v/release/github.com/JoseRodrigues443/go-rest-client)](https://github.com/JoseRodrigues443/go-rest-client/releases)
 [![Go Reference](https://pkg.go.dev/badge/github.com/JoseRodrigues443/go-rest-client.svg)](https://pkg.go.dev/github.com/JoseRodrigues443/go-rest-client)
-[![go.mod](https://img.shields.io/github/go-mod/go-version/JoseRodrigues443/go-rest-client)](go.mod)
-[![LICENSE](https://img.shields.io/github/license/JoseRodrigues443/go-rest-client)](LICENSE)
-[![Build Status](https://img.shields.io/github/workflow/status/JoseRodrigues443/go-rest-client/build)](https://github.com/JoseRodrigues443/go-rest-client/actions?query=workflow%3Abuild+branch%3Amain)
+[![go.mod](https://img.shields.io/github/go-mod/go-version/github.com/JoseRodrigues443/go-rest-client)](go.mod)
+[![LICENSE](https://img.shields.io/github/license/github.com/JoseRodrigues443/go-rest-client)](LICENSE)
+[![Build Status](https://img.shields.io/github/workflow/status/github.com/JoseRodrigues443/go-rest-client/build)](https://github.com/JoseRodrigues443/go-rest-client/actions?query=workflow%3Abuild+branch%3Amain)
 [![Go Report Card](https://goreportcard.com/badge/github.com/JoseRodrigues443/go-rest-client)](https://goreportcard.com/report/github.com/JoseRodrigues443/go-rest-client)
 
-This is a GitHub repository template for Go. It has been created for ease-of-use for anyone who wants to:
+This is a Rest client written in Go. It has been created for ease-of-use for anyone who wants to:
 
 - quickly get into Go without losing too much time on environment setup,
-- create a new repoisitory with basic Continuos Integration.
+- create a new repository with basic Continuos Integration.
+- create a simple golang client
 
 It includes:
 
-- continous integration via [GitHub Actions](https://github.com/features/actions),
+- continuous integration via [GitHub Actions](https://github.com/features/actions),
 - build automation via [Make](https://www.gnu.org/software/make),
 - dependency management using [Go Modules](https://github.com/golang/go/wiki/Modules),
 - code formatting using [gofumpt](https://github.com/mvdan/gofumpt),
@@ -34,7 +35,7 @@ It includes:
 
 1. Sign up on [Codecov](https://codecov.io/) and configure [Codecov GitHub Application](https://github.com/apps/codecov) for all repositories.
 1. Click the `Use this template` button (alt. clone or download this repository).
-1. Replace all occurences of `JoseRodrigues443/go-rest-client` to `your_org/repo_name` in all files.
+1. Replace all occurences of `github.com/JoseRodrigues443/go-rest-client` to `your_org/repo_name` in all files.
 1. Replace all occurences of `seed` to `repo_name` in [Dockerfile](Dockerfile).
 1. Update the following files:
    - [CHANGELOG.md](CHANGELOG.md)
@@ -86,7 +87,7 @@ The release workflow is triggered each time a tag with `v` prefix is pushed.
 
 _CAUTION_: Make sure to understand the consequences before you bump the major version. More info: [Go Wiki](https://github.com/golang/go/wiki/Modules#releasing-modules-v2-or-higher), [Go Blog](https://blog.golang.org/v2-go-modules).
 
-## Maintainance
+## Maintainable
 
 Remember to update Go version in [.github/workflows](.github/workflows), [Makefile](Makefile) and [devcontainer.json](.devcontainer/devcontainer.json).
 

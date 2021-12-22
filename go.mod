@@ -1,4 +1,4 @@
-module github.com/JoseRodrigues443/go-rest-client
+module client
 
 go 1.16
 
