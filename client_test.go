@@ -1,13 +1,19 @@
 package client
 
-// import (
-// 	"testing"
+import (
+	"testing"
 
-// 	"github.com/stretchr/testify/assert"
-// )
+	"github.com/jaswdr/faker"
+	"github.com/stretchr/testify/assert"
+)
 
-// func Test_greet(t *testing.T) {
-// 	got := greet()
+func Test_NewClient(t *testing.T) {
+	faker := faker.New()
+	address := faker.Person().Name()
+	userAgent := faker.Internet().URL()
 
-// 	assert.Equal(t, "Hi!", got, "should properly greet")
-// }
+	client := NewClient(address, userAgent)
+
+	assert.Equal(t, address, client.BaseURL.Path, "Should have the same base URL")
+	assert.Equal(t, userAgent, client.UserAgent, "Should have the same user agent")
+}
