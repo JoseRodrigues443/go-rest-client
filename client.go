@@ -5,12 +5,18 @@ import (
 	"bytes"
 	"context"
 	"encoding/json"
+	"fmt"
 	"io"
 	"log"
 	"net/http"
 	"net/url"
 	"time"
 )
+
+// main call the call method.
+func main() {
+	fmt.Println("Hi, Welcome to the base rest client! 😉")
+}
 
 // HTTPClient interface for http requests.
 type HTTPClient interface {

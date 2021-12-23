@@ -11,6 +11,10 @@ const (
 	UserAgent = "Test/1.0"
 )
 
+func Test_Main(t *testing.T) {
+	main() // for golint to ignore dead code warning
+}
+
 func Test_NewClient(t *testing.T) {
 	client := NewClient(Address, UserAgent)
 
