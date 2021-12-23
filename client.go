@@ -71,8 +71,8 @@ func (c *Client) buildRequest(method Method, path string, body interface{}) (*ht
 	return req, nil
 }
 
-// call makes the final http request and returns a http response.
-func (c *Client) call(req *http.Request, v interface{}) (*http.Response, error) {
+// request makes the final http request and returns a http response.
+func (c *Client) request(req *http.Request, value interface{}) (*http.Response, error) {
 	resp, err := c.httpClient.Do(req)
 	if err != nil {
 		return nil, err
@@ -80,6 +80,15 @@ func (c *Client) call(req *http.Request, v interface{}) (*http.Response, error) 
 
 	defer dclose(resp.Body)
 
-	err = json.NewDecoder(resp.Body).Decode(v)
+	err = json.NewDecoder(resp.Body).Decode(value)
 	return resp, err
+}
+
+// Call makes the final http request and returns a http response.
+func (c *Client) Call(method Method, path string, body interface{}, value interface{}) (*http.Response, error) {
+	req, err := c.buildRequest(method, path, body)
+	if err != nil {
+		return nil, err
+	}
+	return c.request(req, value)
 }
