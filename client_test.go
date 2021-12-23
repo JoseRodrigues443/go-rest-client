@@ -1,8 +1,6 @@
 package client
 
 import (
-	"context"
-	"net/http"
 	"testing"
 
 	"github.com/stretchr/testify/assert"
@@ -31,17 +29,4 @@ func Test_buildRequest(t *testing.T) {
 
 type Message struct {
 	Name, Text string
-}
-
-func Test_Call(t *testing.T) {
-	client := NewClient(Address, UserAgent)
-
-	ctx, _ := context.WithCancel(context.Background())
-	req, _ := http.NewRequestWithContext(ctx, "GET", Address, nil)
-
-	var m Message
-	res, err := client.call(req, &m)
-
-	assert.Nil(t, err, "Should not give error")
-	assert.NotNil(t, res, "Response should exist")
 }
