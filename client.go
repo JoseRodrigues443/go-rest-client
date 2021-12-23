@@ -3,6 +3,7 @@ package client
 
 import (
 	"bytes"
+	"context"
 	"encoding/json"
 	"io"
 	"log"
@@ -10,6 +11,12 @@ import (
 	"net/url"
 	"time"
 )
+
+// HTTPClient interface for http requests.
+type HTTPClient interface {
+	buildRequest(method Method, path string, body interface{}) (*http.Request, error)
+	call(req *http.Request, v interface{}) (*http.Response, error)
+}
 
 // Client stores the needed information for a client.
 type Client struct {
@@ -36,27 +43,6 @@ func NewClient(baseURL string, userAgent string) *Client {
 // Method is the HTTP verb to use.
 type Method string
 
-const (
-	// Get verb.
-	Get Method = "GET"
-	// Head verb.
-	Head Method = "HEAD"
-	// Post verb.
-	Post Method = "POST"
-	// Put verb.
-	Put Method = "PUT"
-	// Patch verb.
-	Patch Method = "PATCH" // RFC 5789
-	// Delete verb.
-	Delete Method = "DELETE"
-	// Connect verb.
-	Connect Method = "CONNECT"
-	// Options verb.
-	Options Method = "OPTIONS"
-	// Trace verb.
-	Trace Method = "TRACE"
-)
-
 // buildRequest creates a request.
 func (c *Client) buildRequest(method Method, path string, body interface{}) (*http.Request, error) {
 	rel := &url.URL{Path: path}
@@ -69,7 +55,11 @@ func (c *Client) buildRequest(method Method, path string, body interface{}) (*ht
 			return nil, err
 		}
 	}
-	req, err := http.NewRequest(string(method), u.String(), buf)
+
+	ctx, cancel := context.WithTimeout(context.Background(), time.Millisecond*duration)
+	defer cancel()
+
+	req, err := http.NewRequestWithContext(ctx, string(method), u.String(), buf)
 	if err != nil {
 		return nil, err
 	}
@@ -87,7 +77,9 @@ func (c *Client) call(req *http.Request, v interface{}) (*http.Response, error) 
 	if err != nil {
 		return nil, err
 	}
-	defer resp.Body.Close()
+
+	defer dclose(resp.Body)
+
 	err = json.NewDecoder(resp.Body).Decode(v)
 	return resp, err
 }

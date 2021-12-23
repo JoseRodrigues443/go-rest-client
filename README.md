@@ -1,6 +1,5 @@
 # Go Repository Template
 
-
 [![Go Reference](https://pkg.go.dev/badge/github.com/JoseRodrigues443/go-rest-client.svg)](https://pkg.go.dev/github.com/JoseRodrigues443/go-rest-client)
 [![go.mod](https://img.shields.io/github/go-mod/go-version/golang-templates/seed)](go.mod)
 [![build](https://github.com/JoseRodrigues443/go-rest-client/actions/workflows/build.yml/badge.svg)](https://github.com/JoseRodrigues443/go-rest-client/actions/workflows/build.yml)
