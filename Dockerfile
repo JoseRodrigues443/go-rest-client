@@ -1,3 +1,3 @@
 FROM scratch
-COPY client /
-ENTRYPOINT ["/client"]
+COPY go-rest-client /
+ENTRYPOINT ["/go-rest-client"]
