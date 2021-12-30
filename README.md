@@ -29,18 +29,6 @@ It includes:
 
 `Watch` this repository to get notified about new releases, issues, etc.
 
-## Usage
-
-1. Sign up on [Codecov](https://codecov.io/) and configure [Codecov GitHub Application](https://github.com/apps/codecov) for all repositories.
-1. Click the `Use this template` button (alt. clone or download this repository).
-1. Replace all occurences of `github.com/JoseRodrigues443/go-rest-client` to `your_org/repo_name` in all files.
-1. Replace all occurences of `seed` to `repo_name` in [Dockerfile](Dockerfile).
-1. Update the following files:
-   - [CHANGELOG.md](CHANGELOG.md)
-   - [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md)
-   - [LICENSE](LICENSE)
-   - [README.md](README.md)
-
 ## Setup
 
 Below you can find sample instructions on how to set up the development environment.
